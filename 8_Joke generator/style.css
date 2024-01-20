@@ -1,0 +1,23 @@
+html {
+    height: 100%;
+    width: 100%;
+  }
+  .container{
+    width:80%;
+    height:80vh;
+    margin:auto;
+    background-color:#e15656
+  }
+  h1{
+    text-align:center;
+    padding-top:12px;
+  }
+  #joke{
+    width:80%;
+    height:30%;
+    padding: 25px 25px;
+    margin:auto;
+    background-color:#0f0a0a;
+    color:green;
+  }
+  

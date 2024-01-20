@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        }
+        html,body{
+        width:100%;
+        height:100%;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #con{
+        display: flex;
+        width: 50%;
+        height:50%;
+        border-radius: 45px;
+        justify-content: center;
+        align-items: center;
+           gap:4%;
+           position: relative;
+           background-image: url("pic.jpg");
+           background-position: cover;
+        }
+        .box{
+            width: 15%;
+            height: 30%;
+            background-color: aquamarine;
+            font-size: 50px;
+            font-weight: 900;
+            display: flex;
+            justify-content: center;
+            color:#fff;
+            background:linear-gradient(to top right,#cb8a15,#f94a13);
+            align-items: center;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            border-radius: 25%;
+        }
+        #b{
+            font-size: 45px;
+            position: absolute;
+            left: 39.5%;
+            color:#fff;
+        }
+        #b2{
+            font-size: 45px;
+            position: absolute;
+            right: 39.5%;
+            color:#fff;
+        }
+        .dnone{
+            display: none;
+        }
+        .date{
+            width:30%;
+            height: 11%;
+            background-color: #cb8a15;
+            position: absolute;
+            left: 35%;
+            top: 76%;
+            font-size: 20px;
+            font-weight: 700;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color:#fff;
+            background:linear-gradient(to top right,#cb8a15,#f94a13);
+            border-radius:12%;
+        }
+
+       
+        
+
+    </style>
+</head>
+<body>
+    <div id="con">
+        <div class="box-h box"></div><b id="b">:</b>
+        <div class="box-m box"></div><b id="b2">:</b>
+        <div class="box-s box"></div>
+        <div class="date"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+html,body{
+    height: 100%;
+    background-color: salmon;
+    display: grid;
+    place-items:center;
+    width: 100%;
+}
+.container{
+    height:50%;
+    width: 50%;
+    border:2px solid yellow;
+    background: url("img/1.jpg");
+    background-position: cover;
+    background-repeat: no-repeat;
+    transition: background 0.5s ease;
+    position: relative;
+}
+.container #left{
+    width:27px;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    padding: 10px;
+    background-color: rgba(201, 207, 85, 0.904);
+    border-radius: 5px;
+
+}
+.container #right{
+    width:27px;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    padding: 10px;
+    background-color: rgb(196, 172, 48);
+    border-radius: 5px;
+}

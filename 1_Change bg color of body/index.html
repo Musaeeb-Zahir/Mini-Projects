@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change bg color</title>
+    <style>
+     body{
+        background-color: deepskyblue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+
+     }
+     button{
+        padding: 10px 20px;
+        border: 1 px solid #e6e6e6;
+        border-radius: 5px;
+        margin: auto;
+           outline: none;
+     }
+    </style>
+</head>
+<body>
+    <button id="conffiti">Change gb-color</button>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+    <script>
+   var duration = 30 * 1000;
+var animationEnd = Date.now() + duration;
+var skew = 1;
+
+function randomInRange(min, max) {
+  return Math.random() * (max - min) + min;
+}
+
+(function frame() {
+  var timeLeft = animationEnd - Date.now();
+  var ticks = Math.max(200, 500 * (timeLeft / duration));
+  skew = Math.max(0.8, skew - 0.001);
+
+  confetti({
+    particleCount: 1,
+    startVelocity: 0,
+    ticks: ticks,
+    origin: {
+      x: Math.random(),
+      // since particles fall down, skew start toward the top
+      y: (Math.random() * skew) - 0.2
+    },
+    colors: ['#ffffff'],
+    shapes: ['circle'],
+    gravity: randomInRange(0.4, 0.6),
+    scalar: randomInRange(0.4, 1),
+    drift: randomInRange(-0.4, 0.4)
+  });
+
+  if (timeLeft > 0) {
+    requestAnimationFrame(frame);
+  }
+}());
+</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 45px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: black;
+    color: wheat;
+}
+
+.curser {
+    z-index: 999;
+    position: fixed;
+    background-color: blueviolet;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    pointer-events: none;
+    box-shadow: 0 0 20px rgb(0, 157, 241), 0 0 60px rgb(0, 157, 241), 0 0 100px rgb(0, 157, 241);
+    transform: translate(-50%, -50%);
+    animation: colors 5s infinite;
+    display: none;
+}
+
+@keyframes colors {
+    0% {
+        filter: hue-rotate(0deg)
+    }
+
+    100% {
+        filter: hue-rotate(360deg)
+    }
+
+}
+
+.curser::before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: blue;
+    opacity: 0.3;
+    transform: translate(-30%,-30%);
+    
+}
