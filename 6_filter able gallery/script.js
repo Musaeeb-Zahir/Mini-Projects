@@ -5,6 +5,8 @@
         button.addEventListener("click",(e)=>{
         e.preventDefault()
         const filter=e.target.dataset.filter //Jis pr click kra us ka filter nikalka filter ma store kro   e.g filter===car
+        // console.log(e);
+        
         storeImage.forEach((items)=>{
             if(filter==='all'){
                 items.style.display="block"; 

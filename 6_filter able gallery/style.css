@@ -34,9 +34,16 @@ h2{
     text-decoration: none;
     font-size: 1.1rem;
     margin: 0 1.5rem;
-    background-color: cadetblue;
     color: #fff;
+    border: 2px solid #f3f3f3;
+    border-radius: 5px;
+    color: #323232;
     padding: 8px 22px;
+}
+.menu a:hover{
+    background-color: cadetblue;
+    color:#f8f6f6;
+
 }
 .box{
     display: flex;
@@ -56,4 +63,7 @@ h2{
     padding: 12px;
     box-shadow: 7px 7px 10px black;
     
+}
+.btn{
+
 }
